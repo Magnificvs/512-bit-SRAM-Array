@@ -6,9 +6,9 @@ A USC EE 577a team project that takes a transistor-level SRAM from schematic des
 
 The array stores **32 words × 16 bits** in an **8-row × 64-column** grid of 6T bitcells. The upper three address bits select one of eight wordlines; the lower two drive a one-hot column decoder and 4:1 column selection. Each word draws four bits from each of four 128-bit banks. On a read, the array precharges the differential bitlines, lets the selected bitcell develop a voltage difference, and senses and latches the result. Write drivers drive the selected bitline pairs.
 
-<img width="1382" height="801" alt="512-bit SRAM architecture: four banks, row decoder, column mux, and read/write circuitry" src="https://github.com/user-attachments/assets/52c23b73-0419-4b7f-a063-c9b0b1fb7c2a" />
+![Logical block diagram showing address decoding, four SRAM banks, and 16-bit read/write I/O](docs/sram-architecture.svg)
 
-*Architecture reference: USC EE 577a Lab4A handout, Figure 1.*
+*Logical block diagram of the SRAM organization.*
 
 ## Design and verification
 
