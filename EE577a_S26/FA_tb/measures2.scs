@@ -1,0 +1,77 @@
+simulator lang=spice
+.param vdd=1 vth=0.5
+
+.measure tran ev01_Ci2_rise_SUM  trig v("Ci2") val=vth rise=1 from=0.95e-9 to=1.2e-9  targ v("S2") val=vth rise=1 from=0.95e-9 to=1.2e-9
+.measure tran ev02_B2_rise_SUM  trig v("B2") val=vth rise=1 from=1.95e-9 to=2.2e-9  targ v("S2") val=vth fall=1 from=1.95e-9 to=2.2e-9
+.measure tran ev02_B2_rise_COUT trig v("B2") val=vth rise=1 from=1.95e-9 to=2.2e-9  targ v("Co2") val=vth rise=1 from=1.95e-9 to=2.2e-9
+
+.measure tran ev03_Ci2_fall_SUM  trig v("Ci2") val=vth fall=1 from=2.95e-9 to=3.2e-9  targ v("S2") val=vth rise=1 from=2.95e-9 to=3.2e-9
+.measure tran ev03_Ci2_fall_COUT trig v("Ci2") val=vth fall=1 from=2.95e-9 to=3.2e-9  targ v("Co2") val=vth fall=1 from=2.95e-9 to=3.2e-9
+
+.measure tran ev04_A2_rise_SUM  trig v("A2") val=vth rise=1 from=3.95e-9 to=4.2e-9  targ v("S2") val=vth fall=1 from=3.95e-9 to=4.2e-9
+.measure tran ev04_A2_rise_COUT trig v("A2") val=vth rise=1 from=3.95e-9 to=4.2e-9  targ v("Co2") val=vth rise=1 from=3.95e-9 to=4.2e-9
+
+.measure tran ev05_Ci2_rise_SUM  trig v("Ci2") val=vth rise=1 from=4.95e-9 to=5.2e-9  targ v("S2") val=vth rise=1 from=4.95e-9 to=5.2e-9
+.measure tran ev06_A2_fall_SUM  trig v("A2") val=vth fall=1 from=5.95e-9 to=6.2e-9  targ v("S2") val=vth fall=1 from=5.95e-9 to=6.2e-9
+.measure tran ev06_A2_fall_COUT trig v("A2") val=vth fall=1 from=5.95e-9 to=6.2e-9  targ v("Co2") val=vth fall=1 from=5.95e-9 to=6.2e-9
+
+.measure tran ev07_A2_rise_SUM  trig v("A2") val=vth rise=1 from=6.95e-9 to=7.2e-9  targ v("S2") val=vth rise=1 from=6.95e-9 to=7.2e-9
+.measure tran ev07_A2_rise_COUT trig v("A2") val=vth rise=1 from=6.95e-9 to=7.2e-9  targ v("Co2") val=vth rise=1 from=6.95e-9 to=7.2e-9
+
+.measure tran ev08_B2_fall_SUM  trig v("B2") val=vth fall=1 from=7.95e-9 to=8.2e-9  targ v("S2") val=vth fall=1 from=7.95e-9 to=8.2e-9
+.measure tran ev09_A2_fall_SUM  trig v("A2") val=vth fall=1 from=8.95e-9 to=9.2e-9  targ v("S2") val=vth rise=1 from=8.95e-9 to=9.2e-9
+.measure tran ev09_A2_fall_COUT trig v("A2") val=vth fall=1 from=8.95e-9 to=9.2e-9  targ v("Co2") val=vth fall=1 from=8.95e-9 to=9.2e-9
+
+.measure tran ev10_A2_rise_SUM  trig v("A2") val=vth rise=1 from=9.95e-9 to=10.2e-9  targ v("S2") val=vth fall=1 from=9.95e-9 to=10.2e-9
+.measure tran ev10_A2_rise_COUT trig v("A2") val=vth rise=1 from=9.95e-9 to=10.2e-9  targ v("Co2") val=vth rise=1 from=9.95e-9 to=10.2e-9
+
+.measure tran ev11_Ci2_fall_SUM  trig v("Ci2") val=vth fall=1 from=10.95e-9 to=11.2e-9  targ v("S2") val=vth rise=1 from=10.95e-9 to=11.2e-9
+.measure tran ev11_Ci2_fall_COUT trig v("Ci2") val=vth fall=1 from=10.95e-9 to=11.2e-9  targ v("Co2") val=vth fall=1 from=10.95e-9 to=11.2e-9
+
+.measure tran ev12_Ci2_rise_SUM  trig v("Ci2") val=vth rise=1 from=11.95e-9 to=12.2e-9  targ v("S2") val=vth fall=1 from=11.95e-9 to=12.2e-9
+.measure tran ev12_Ci2_rise_COUT trig v("Ci2") val=vth rise=1 from=11.95e-9 to=12.2e-9  targ v("Co2") val=vth rise=1 from=11.95e-9 to=12.2e-9
+
+.measure tran ev13_B2_rise_SUM  trig v("B2") val=vth rise=1 from=12.95e-9 to=13.2e-9  targ v("S2") val=vth rise=1 from=12.95e-9 to=13.2e-9
+.measure tran ev14_Ci2_fall_SUM  trig v("Ci2") val=vth fall=1 from=13.95e-9 to=14.2e-9  targ v("S2") val=vth fall=1 from=13.95e-9 to=14.2e-9
+.measure tran ev15_A2_fall_SUM  trig v("A2") val=vth fall=1 from=14.95e-9 to=15.2e-9  targ v("S2") val=vth rise=1 from=14.95e-9 to=15.2e-9
+.measure tran ev15_A2_fall_COUT trig v("A2") val=vth fall=1 from=14.95e-9 to=15.2e-9  targ v("Co2") val=vth fall=1 from=14.95e-9 to=15.2e-9
+
+.measure tran ev16_Ci2_rise_SUM  trig v("Ci2") val=vth rise=1 from=15.95e-9 to=16.2e-9  targ v("S2") val=vth fall=1 from=15.95e-9 to=16.2e-9
+.measure tran ev16_Ci2_rise_COUT trig v("Ci2") val=vth rise=1 from=15.95e-9 to=16.2e-9  targ v("Co2") val=vth rise=1 from=15.95e-9 to=16.2e-9
+
+.measure tran ev17_B2_fall_SUM  trig v("B2") val=vth fall=1 from=16.95e-9 to=17.2e-9  targ v("S2") val=vth rise=1 from=16.95e-9 to=17.2e-9
+.measure tran ev17_B2_fall_COUT trig v("B2") val=vth fall=1 from=16.95e-9 to=17.2e-9  targ v("Co2") val=vth fall=1 from=16.95e-9 to=17.2e-9
+
+.measure tran ev18_Ci2_fall_SUM  trig v("Ci2") val=vth fall=1 from=17.95e-9 to=18.2e-9  targ v("S2") val=vth fall=1 from=17.95e-9 to=18.2e-9
+.measure tran ev19_B2_rise_SUM  trig v("B2") val=vth rise=1 from=18.95e-9 to=19.2e-9  targ v("S2") val=vth rise=1 from=18.95e-9 to=19.2e-9
+.measure tran ev20_B2_fall_SUM  trig v("B2") val=vth fall=1 from=19.95e-9 to=20.2e-9  targ v("S2") val=vth fall=1 from=19.95e-9 to=20.2e-9
+.measure tran ev21_A2_rise_COUT trig v("A2") val=vth rise=1 from=20.95e-9 to=21.2e-9  targ v("Co2") val=vth rise=1 from=20.95e-9 to=21.2e-9
+
+.measure tran ev22_A2_fall_SUM  trig v("A2") val=vth fall=1 from=21.95e-9 to=22.2e-9  targ v("S2") val=vth rise=1 from=21.95e-9 to=22.2e-9
+.measure tran ev22_A2_fall_COUT trig v("A2") val=vth fall=1 from=21.95e-9 to=22.2e-9  targ v("Co2") val=vth fall=1 from=21.95e-9 to=22.2e-9
+
+.measure tran ev23_A2_rise_SUM  trig v("A2") val=vth rise=1 from=22.95e-9 to=23.2e-9  targ v("S2") val=vth fall=1 from=22.95e-9 to=23.2e-9
+.measure tran ev23_A2_rise_COUT trig v("A2") val=vth rise=1 from=22.95e-9 to=23.2e-9  targ v("Co2") val=vth rise=1 from=22.95e-9 to=23.2e-9
+
+.measure tran ev24_A2_rise_COUT trig v("A2") val=vth rise=1 from=24.95e-9 to=25.2e-9  targ v("Co2") val=vth rise=1 from=24.95e-9 to=25.2e-9
+
+.measure tran ev25_A2_fall_SUM  trig v("A2") val=vth fall=1 from=25.95e-9 to=26.2e-9  targ v("S2") val=vth rise=1 from=25.95e-9 to=26.2e-9
+.measure tran ev25_A2_fall_COUT trig v("A2") val=vth fall=1 from=25.95e-9 to=26.2e-9  targ v("Co2") val=vth fall=1 from=25.95e-9 to=26.2e-9
+
+.measure tran ev26_A2_rise_COUT trig v("A2") val=vth rise=1 from=26.95e-9 to=27.2e-9  targ v("Co2") val=vth rise=1 from=26.95e-9 to=27.2e-9
+
+.measure tran ev27_A2_fall_COUT trig v("A2") val=vth fall=1 from=27.95e-9 to=28.2e-9  targ v("Co2") val=vth fall=1 from=27.95e-9 to=28.2e-9
+
+.measure tran ev28_A2_rise_COUT trig v("A2") val=vth rise=1 from=28.95e-9 to=29.2e-9  targ v("Co2") val=vth rise=1 from=28.95e-9 to=29.2e-9
+
+.measure tran ev29_A2_fall_COUT trig v("A2") val=vth fall=1 from=29.95e-9 to=30.2e-9  targ v("Co2") val=vth fall=1 from=29.95e-9 to=30.2e-9
+
+.measure tran ev30_A2_rise_SUM  trig v("A2") val=vth rise=1 from=30.95e-9 to=31.2e-9  targ v("S2") val=vth fall=1 from=30.95e-9 to=31.2e-9
+.measure tran ev30_A2_rise_COUT trig v("A2") val=vth rise=1 from=30.95e-9 to=31.2e-9  targ v("Co2") val=vth rise=1 from=30.95e-9 to=31.2e-9
+
+.measure tran ev31_A2_fall_COUT trig v("A2") val=vth fall=1 from=31.95e-9 to=32.2e-9  targ v("Co2") val=vth fall=1 from=31.95e-9 to=32.2e-9
+
+.measure tran ev32_A2_rise_COUT trig v("A2") val=vth rise=1 from=32.95e-9 to=33.2e-9  targ v("Co2") val=vth rise=1 from=32.95e-9 to=33.2e-9
+
+.measure tran ev33_A2_fall_COUT trig v("A2") val=vth fall=1 from=33.95e-9 to=34.2e-9  targ v("Co2") val=vth fall=1 from=33.95e-9 to=34.2e-9
+

@@ -1,0 +1,29 @@
+
+radix 1 11111 11111 1 1 1 1 1 4444 4444 1
+io    i i     i     i i i i i iiii iiii i
+vname pre_en A<[4:0]> A_b<[4:0]> write_en dec_en pre_en_SA read_en sense_en data<[15:0]> data_b<[15:0]> reset_b
+tunit 1ns
+trise 0.005
+tfall 0.005
+vih 1.0
+vil 0.0
+
+
+;WRITE "0"
+;        pre_en || A[4:0] || A[4:0] || write_en || dec_en || pre_en_SA || read_en || sense_en || data[15:0] || data_b[15:0] || reset_b
+0        1         00000     11111     0           0         1            1          0           FFFF          0000            0       ; reset
+0.2      0         00000     11111     0           0         1            1          0           FFFF          0000            1       ; rst off,precharge
+0.5      1         00000     11111     1           0         1            1          0           FFFF          0000            1       ; pre off,en WD
+0.7      1         00000     11111     1           1         1            1          0           FFFF          0000            1       ; en WL, write
+1.2      1         00000     11111     0           0         1            1          0           FFFF          0000            1       ; dis WL/WD
+1.35     0         00000     11111     0           0         0            1          0           FFFF          0000            1       ; pre for "READ"
+
+;READ "1"
+;        pre_en || A[4:0] || A[4:0] || write_en || dec_en || pre_en_SA || read_en || sense_en || data[15:0] || data_b[15:0] || reset_b
+1.5      1         00000     11111     0           1         1            0          0           FFFF          0000            1       ; pre off, WL/SA(dV)
+2        1         00000     11111     0           0         1            1          1           FFFF          0000            1       ; cut WL/SA, en SA
+2.2      1         00000     11111     0           0         1            1          0           FFFF          0000            1       ; dis SA,latch
+2.35     0         00000     11111     0           0         1            1          0           FFFF          0000            1       ; precharge 
+
+
+

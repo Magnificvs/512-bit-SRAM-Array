@@ -1,0 +1,17 @@
+radix 1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+io    i  i  i  i  i  i  i  i  i  i  i  i  i  i  i  i
+vname A8 A7 A6 A5 A4 A3 A2 A1 B8 B7 B6 B5 B4 B3 B2 B1
+
+; --- Timing information ---
+tunit 1ns
+trise 0.01
+tfall 0.01
+vih   1.0
+vil   0.0
+
+; --- Test vectors 
+; 	A8 	A7 	A6	A5	A4	A3	A2	A1	B8	B7	B6	B5	B4	B3	B2	B1
+0  	0 	0 	0	0	0	0	0	0	0 	0 	0	0	0	0	0	0
+1  	0 	0 	0	0 	0 	0	0	0	0	0	0 	0	0	0	0	1
+2  	0 	0 	0	0	0	0	0	1	0 	0 	0	0	0	0	0	0
+3  	0 	0 	0	0	0	0	0	0	0 	0 	0	0	0	0	0	0

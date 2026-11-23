@@ -1,0 +1,92 @@
+; Deterministic synthetic stimulus, independent of any personal identifier.
+; Times and controls match the original vector. Expected read values are logical scoreboard checks.
+
+radix 1 41 41 1 1 1 1 1 4444 4444
+io    i ii ii i i i i i iiii iiii
+vname precharge_en A<[4:0]> A_bar<[4:0]> write_en decoder_en pre_en_SA read_en sense_en data<[15:0]> data_bar<[15:0]>
+tunit ns
+slope 0.01
+vih 1.0
+vil 0.0
+
+0    1 80 71 0 0 1 1 0 0265 FD9A ; Initial disabled state
+
+2    0 80 71 0 0 1 1 0 0265 FD9A ; Synthetic write 01: address 0x10, store 0x0265
+3    1 80 71 1 0 1 1 0 0265 FD9A
+4    1 80 71 1 1 1 1 0 0265 FD9A
+
+5    0 71 80 0 0 1 1 0 F420 0BDF ; Synthetic write 02: address 0x0F, store 0xF420
+6    1 71 80 1 0 1 1 0 F420 0BDF
+7    1 71 80 1 1 1 1 0 F420 0BDF
+
+8    0 51 A0 0 0 1 1 0 CB88 3477 ; Synthetic write 03: address 0x0B, store 0xCB88
+9    1 51 A0 1 0 1 1 0 CB88 3477
+10   1 51 A0 1 1 1 1 0 CB88 3477
+
+11   0 90 61 0 0 1 1 0 4376 BC89 ; Synthetic write 04: address 0x12, store 0x4376
+12   1 90 61 1 0 1 1 0 4376 BC89
+13   1 90 61 1 1 1 1 0 4376 BC89
+
+14   0 11 E0 0 0 1 1 0 5011 AFEE ; Synthetic write 05: address 0x03, store 0x5011
+15   1 11 E0 1 0 1 1 0 5011 AFEE
+16   1 11 E0 1 1 1 1 0 5011 AFEE
+
+17   0 41 B0 0 0 1 1 0 735F 8CA0 ; Synthetic write 06: address 0x09, store 0x735F
+18   1 41 B0 1 0 1 1 0 735F 8CA0
+19   1 41 B0 1 1 1 1 0 735F 8CA0
+
+20   0 41 B0 0 0 1 1 0 C417 3BE8 ; Synthetic write 07: address 0x09, store 0xC417
+21   1 41 B0 1 0 1 1 0 C417 3BE8
+22   1 41 B0 1 1 1 1 0 C417 3BE8
+
+23   0 40 B1 0 0 1 1 0 48F5 B70A ; Synthetic write 08: address 0x08, store 0x48F5
+24   1 40 B1 1 0 1 1 0 48F5 B70A
+25   1 40 B1 1 1 1 1 0 48F5 B70A
+
+26   0 60 91 0 0 1 1 0 F195 0E6A ; Synthetic write 09: address 0x0C, store 0xF195
+27   1 60 91 1 0 1 1 0 F195 0E6A
+28   1 60 91 1 1 1 1 0 F195 0E6A
+
+29  0 D0 21 0 0 1 1 0 FF01 00FE ; Synthetic write 10: address 0x1A, store 0xFF01
+30  1 D0 21 1 0 1 1 0 FF01 00FE
+31  1 D0 21 1 1 1 1 0 FF01 00FE
+
+32    0 90 61 0 0 0 1 0 4376 BC89 ; Synthetic read 01: address 0x12, expect 0x4376
+33    1 90 61 0 1 1 0 0 4376 BC89
+33.5  0 90 61 0 0 0 1 1 4376 BC89
+
+34    0 60 91 0 0 0 1 0 F195 0E6A ; Synthetic read 02: address 0x0C, expect 0xF195
+35    1 60 91 0 1 1 0 0 F195 0E6A
+35.5  0 60 91 0 0 0 1 1 F195 0E6A
+
+36    0 41 B0 0 0 0 1 0 C417 3BE8 ; Synthetic read 03: address 0x09, expect 0xC417
+37    1 41 B0 0 1 1 0 0 C417 3BE8
+37.5  0 41 B0 0 0 0 1 1 C417 3BE8
+
+38    0 11 E0 0 0 0 1 0 5011 AFEE ; Synthetic read 04: address 0x03, expect 0x5011
+39    1 11 E0 0 1 1 0 0 5011 AFEE
+39.5  0 11 E0 0 0 0 1 1 5011 AFEE
+
+40    0 11 E0 0 0 0 1 0 5011 AFEE ; Synthetic read 05: address 0x03, expect 0x5011
+41    1 11 E0 0 1 1 0 0 5011 AFEE
+41.5  0 11 E0 0 0 0 1 1 5011 AFEE
+
+42    0 40 B1 0 0 0 1 0 48F5 B70A ; Synthetic read 06: address 0x08, expect 0x48F5
+43    1 40 B1 0 1 1 0 0 48F5 B70A
+43.5  0 40 B1 0 0 0 1 1 48F5 B70A
+
+44    0 D0 21 0 0 0 1 0 FF01 00FE ; Synthetic read 07: address 0x1A, expect 0xFF01
+45    1 D0 21 0 1 1 0 0 FF01 00FE
+45.5  0 D0 21 0 0 0 1 1 FF01 00FE
+
+46    0 71 80 0 0 0 1 0 F420 0BDF ; Synthetic read 08: address 0x0F, expect 0xF420
+47    1 71 80 0 1 1 0 0 F420 0BDF
+47.5  0 71 80 0 0 0 1 1 F420 0BDF
+
+48    0 80 71 0 0 0 1 0 0265 FD9A ; Synthetic read 09: address 0x10, expect 0x0265
+49    1 80 71 0 1 1 0 0 0265 FD9A
+49.5  0 80 71 0 0 0 1 1 0265 FD9A
+
+50    0 51 A0 0 0 0 1 0 CB88 3477 ; Synthetic read 10: address 0x0B, expect 0xCB88
+51    1 51 A0 0 1 1 0 0 CB88 3477
+51.5  0 51 A0 0 0 0 1 1 CB88 3477

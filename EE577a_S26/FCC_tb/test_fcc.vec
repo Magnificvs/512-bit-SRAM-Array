@@ -1,0 +1,29 @@
+radix 1  1  1  1
+io    i  i  i  i
+vname A  B  HA HB ; HA = A(HCC) ; HB = B(HCC)
+
+; --- Timing information ---
+tunit 1ns
+trise 0.01
+tfall 0.01
+vih   1.0
+vil   0.0
+
+; --- Test vectors 
+; 	A 	B 	HA	HB
+0  	0 	0 	0	0
+1  	0 	0 	0	1
+2  	0 	0 	1	0
+3  	0	0	1	1
+4  	0   1   0	0
+5  	0	1	0	1
+6  	0	1	1	0
+7	0	1	1	1
+8	1	0	0	0
+9	1	0	0	1
+10	1	0	1	0
+11	1	0	1	1
+12	1	1	0	0
+13	1	1	0	1
+14	1	1	1	0
+15	1	1	1	1

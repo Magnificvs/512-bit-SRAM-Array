@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stimuliremovedset>
+    <namedstimuli>
+        <stimuliname>CS2_</stimuliname>
+    </namedstimuli>
+    <namedstimuli>
+        <stimuliname>09V</stimuliname>
+    </namedstimuli>
+    <namedstimuli>
+        <stimuliname>CS3_b</stimuliname>
+    </namedstimuli>
+    <namedstimuli>
+        <stimuliname>CS2_b</stimuliname>
+    </namedstimuli>
+    <namedstimuli>
+        <stimuliname>CS1_b</stimuliname>
+    </namedstimuli>
+    <namedstimuli>
+        <stimuliname>CS0_b</stimuliname>
+    </namedstimuli>
+    <namedstimuli>
+        <stimuliname>CS3</stimuliname>
+    </namedstimuli>
+    <namedstimuli>
+        <stimuliname>CS2</stimuliname>
+    </namedstimuli>
+    <namedstimuli>
+        <stimuliname>CS1</stimuliname>
+    </namedstimuli>
+    <namedstimuli>
+        <stimuliname>CS0</stimuliname>
+    </namedstimuli>
+    <namedstimuli>
+        <stimuliname>08V</stimuliname>
+    </namedstimuli>
+</stimuliremovedset>
